@@ -1,0 +1,28 @@
+{
+  "name": "hackathon-zenvia",
+  "version": "1.0.0",
+  "description": "Back-end project for hackathon Zenvia - new horizon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lcsantos93/hackathon-zenvia.git"
+  },
+  "author": "Lucas Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lcsantos93/hackathon-zenvia/issues"
+  },
+  "homepage": "https://github.com/lcsantos93/hackathon-zenvia#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mock-json-server": "^1.3.6",
+    "uuid": "^8.3.0"
+  }
+}

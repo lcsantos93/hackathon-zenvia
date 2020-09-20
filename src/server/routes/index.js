@@ -34,7 +34,7 @@ router.get('/empresas', async (req, res, next) => {
         }
         res.status(500).send(body);
     }
-
+    
 
 })
 
@@ -53,5 +53,13 @@ router.post('/send-complaint', jsonParser, async (req, res) => {
         res.status(201).send(body);
     }
 
+    const company = req.body.loja;
+    const complaint = {
+        foto: '',
+        nome: req.body.nome ? req.body.nome : 'Usuário Anônimo',
+        reclamacao: req.body.reclamacao,
+        status: 'Aberto'
+    }
+    fireBaseController.saveComplaint(company, complaint)
 })
 module.exports = router;

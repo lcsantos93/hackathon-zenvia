@@ -14,15 +14,15 @@ const firebaseConfig = {
 
 class FireBaseController {
     static async getCompanies(req, res) {
-        
+
         if (!firebase.apps.length) {
             firebase.initializeApp(firebaseConfig);
         }
-        
+
         const response = await firebase.database().ref().once('value').then(function (snapshot) {
             const values = snapshot.val();
             return values;
-        }).catch( e =>{
+        }).catch(e => {
             console.log(e);
         });
 

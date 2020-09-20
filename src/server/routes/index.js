@@ -37,7 +37,8 @@ router.get('/empresas', (req, res, next) => {
     if (!firebase.apps.length) {
         firebase.initializeApp(firebaseConfig);
     }
-    firebase.database().ref('/empresa/').once('value').then(function (snapshot) {
+    
+    firebase.database().ref().once('value').then(function (snapshot) {
         const values = snapshot.val()
         res.json(values);
     });;

@@ -6,7 +6,7 @@ require('firebase/auth');
 require('firebase/database');
 
 const router = express.Router()
-const sendClaimController = require('../../controllers/sendClaimController');
+const sendComplaintController = require('../../controllers/sendsendComplaintController');
 const { v4: uuidv4, stringify } = require('uuid');
 
 const jsonParser = bodyParser.json()
@@ -44,10 +44,10 @@ router.get('/empresas', (req, res, next) => {
 
 })
 
-router.post('/send-claim', jsonParser, async (req, res) => {
+router.post('/send-complaint', jsonParser, async (req, res) => {
 
-    const sendClaim = await sendClaimController.sendClaim(req, res);
-    if (sendClaim !== 200) {
+    const sendComplaint = await sendComplaintController.sendComplaint(req, res);
+    if (sendComplaint !== 200) {
         const body = {
             'message': 'Ocorreu um erro no envio da Reclamação',
         }

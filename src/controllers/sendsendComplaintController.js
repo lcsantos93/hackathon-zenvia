@@ -4,9 +4,9 @@ const bent = require('bent')
 const getJSON = bent('json')
 const getBuffer = bent('buffer')
 
-class SendClaimController {
+class SendComplaintController {
 
-    static async sendClaim(req, res) {
+    static async sendComplaint(req, res) {
         const name = req.body.nome;
         const phone = req.body.telefone;
         let id = 'CH:' + new Date();
@@ -35,4 +35,4 @@ class SendClaimController {
     }
 }
 
-module.exports = SendClaimController;   
+module.exports = SendComplaintController;   

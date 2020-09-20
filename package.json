@@ -1,6 +1,9 @@
 {
   "name": "hackathon-zenvia",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.11.1"
+  },
   "description": "Back-end project for hackathon Zenvia - new horizon",
   "main": "index.js",
   "scripts": {

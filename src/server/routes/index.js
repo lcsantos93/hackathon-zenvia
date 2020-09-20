@@ -6,7 +6,7 @@ require('firebase/auth');
 require('firebase/database');
 
 const router = express.Router()
-const sendComplaintController = require('../../controllers/sendsendComplaintController');
+const sendComplaintController = require('../../controllers/sendComplaintController');
 const { v4: uuidv4, stringify } = require('uuid');
 
 const jsonParser = bodyParser.json()
